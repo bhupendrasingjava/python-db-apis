@@ -183,7 +183,7 @@ def modify_student(roll_number):
     try:
         data = request.get_json()
         if not data:
-            logger.warning("No data provided for student update")
+            logger.warning("No data provided for student to update")
             raise BadRequest("No data provided")
         updated = update_student(roll_number, data)
         if updated:
